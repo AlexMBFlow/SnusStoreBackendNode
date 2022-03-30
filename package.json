@@ -1,7 +1,15 @@
 {
   "dependencies": {
+    "body-parser": "^1.19.2",
     "express": "^4.17.3",
+    "mongodb": "^4.4.1",
+    "mongoose": "^6.2.9"
+  },
+  "devDependencies": {
     "nodemon": "^2.0.15"
+  },
+  "scripts": {
+    "dev": "nodemon app.js"
   },
   "type": "module"
 }
