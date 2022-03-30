@@ -6,9 +6,9 @@ const PORT = 3000;
 const app = express()
 app.use('/api', routers)
 
-app.get('/', function(req, res){
+app.get('/', (req, res) => {
     res.send('hello snus');
-  });
+});
 
 const start = () => {
     try {
