@@ -3,6 +3,6 @@ import snus from "./snus.js";
 
 const router = new Router();
 
-router.use("/snus", snus)
+router.use("/", snus)
 
 export default router

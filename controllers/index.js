@@ -1,7 +1,9 @@
+import { snusStore } from "../json.js"
 class SnusController {
     getSnus(req, res, next) {
-        console.log(req)
-        res.send("hi")
+        const json = JSON.stringify(snusStore)
+        //console.log(req)
+        res.json(json)
     }
 }
 export default new SnusController()
