@@ -10,7 +10,7 @@ app.use(cors())
 app.use('/api', routers)
 
 app.get('/', (req, res) => {
-    res.send('hello snus');
+    res.send('hello');
 });
 
 const start = async () => {

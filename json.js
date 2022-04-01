@@ -7,8 +7,9 @@ export const snusStore = {
             nicotine: 70,
             saturation: "Очень крепкий",
             price: 420,
-            avatar: 'https://snus-upr.ru/assets/images/products/671/rendm-mango.jpg',
-            id: 1
+            avatar: 'http://voronezh-snus.space/uploads/images/big/5f3317f8-948e-4835-b53a-e398d70b5773.jpg',
+            id: 1,
+            rate: 5
         },
         {
             name: "Nictech",
@@ -17,8 +18,9 @@ export const snusStore = {
             nicotine: 70,
             saturation: "Очень крепкий",
             price: 620,
-            avatar: 'https://snus-upr.ru/assets/images/products/671/rendm-mango.jpg',
-            id: 2
+            avatar: 'http://voronezh-snus.space/uploads/images/big/5f3317f8-948e-4835-b53a-e398d70b5773.jpg',
+            id: 2,
+            rate: 5
         },
         {
             name: "Corvus",
@@ -27,8 +29,9 @@ export const snusStore = {
             nicotine: 50,
             saturation: "Средний",
             price: 450,
-            avatar: 'https://snus-upr.ru/assets/images/products/671/rendm-mango.jpg',
-            id: 3
+            avatar: 'http://voronezh-snus.space/uploads/images/big/5f3317f8-948e-4835-b53a-e398d70b5773.jpg',
+            id: 3,
+            rate: 5
         },
         {
             name: "RED",
@@ -37,8 +40,9 @@ export const snusStore = {
             nicotine: 50,
             saturation: "Крепкий",
             price: 500,
-            avatar: 'https://snus-upr.ru/assets/images/products/671/rendm-mango.jpg',
-            id: 4
+            avatar: 'http://voronezh-snus.space/uploads/images/big/5f3317f8-948e-4835-b53a-e398d70b5773.jpg',
+            id: 4,
+            rate: 5
         },
         {
             name: "Odens",
@@ -47,8 +51,9 @@ export const snusStore = {
             nicotine: 40,
             saturation: "Крепкий",
             price: 500,
-            avatar: 'https://snus-upr.ru/assets/images/products/671/rendm-mango.jpg',
-            id: 5
+            avatar: 'http://voronezh-snus.space/uploads/images/big/5f3317f8-948e-4835-b53a-e398d70b5773.jpg',
+            id: 5,
+            rate: 5
         },
         {
             name: "Alfa",
@@ -57,8 +62,9 @@ export const snusStore = {
             nicotine: 60,
             saturation: "Крепкий",
             price: 400,
-            avatar: 'https://snus-upr.ru/assets/images/products/671/rendm-mango.jpg',
-            id: 6
+            avatar: 'http://voronezh-snus.space/uploads/images/big/5f3317f8-948e-4835-b53a-e398d70b5773.jpg',
+            id: 6,
+            rate: 5
         },
         {
             name: "Alfa",
@@ -67,8 +73,9 @@ export const snusStore = {
             nicotine: 60,
             saturation: "Крепкий",
             price: 400,
-            avatar: 'https://snus-upr.ru/assets/images/products/671/rendm-mango.jpg',
-            id: 7
+            avatar: 'http://voronezh-snus.space/uploads/images/big/5f3317f8-948e-4835-b53a-e398d70b5773.jpg',
+            id: 7,
+            rate: 5
         },
         {
             name: "Deluxe",
@@ -77,8 +84,9 @@ export const snusStore = {
             nicotine: 70,
             saturation: "Очень крепкий",
             price: 420,
-            avatar: 'https://snus-upr.ru/assets/images/products/671/rendm-mango.jpg',
-            id: 8
+            avatar: 'http://voronezh-snus.space/uploads/images/big/5f3317f8-948e-4835-b53a-e398d70b5773.jpg',
+            id: 8,
+            rate: 5
         },
         {
             name: "Nictech",
@@ -87,8 +95,9 @@ export const snusStore = {
             nicotine: 70,
             saturation: "Очень крепкий",
             price: 420,
-            avatar: 'https://snus-upr.ru/assets/images/products/671/rendm-mango.jpg',
-            id: 9
+            avatar: 'http://voronezh-snus.space/uploads/images/big/5f3317f8-948e-4835-b53a-e398d70b5773.jpg',
+            id: 9,
+            rate: 5
         },
         {
             name: "Nictech",
@@ -97,8 +106,9 @@ export const snusStore = {
             nicotine: 70,
             saturation: "Очень крепкий",
             price: 420,
-            avatar: 'https://snus-upr.ru/assets/images/products/671/rendm-mango.jpg',
-            id: 10
+            avatar: 'http://voronezh-snus.space/uploads/images/big/5f3317f8-948e-4835-b53a-e398d70b5773.jpg',
+            id: 10,
+            rate: 5
         },
         {
             name: "Nictech",
@@ -107,8 +117,9 @@ export const snusStore = {
             nicotine: 70,
             saturation: "Очень крепкий",
             price: 420,
-            avatar: 'https://snus-upr.ru/assets/images/products/671/rendm-mango.jpg',
-            id: 11
+            avatar: 'http://voronezh-snus.space/uploads/images/big/5f3317f8-948e-4835-b53a-e398d70b5773.jpg',
+            id: 11,
+            rate: 5
         },        {
             name: "Nictech",
             taste: "Черника",
@@ -116,8 +127,9 @@ export const snusStore = {
             nicotine: 70,
             saturation: "Очень крепкий",
             price: 420,
-            avatar: 'https://snus-upr.ru/assets/images/products/671/rendm-mango.jpg',
-            id: 12
+            avatar: 'http://voronezh-snus.space/uploads/images/big/5f3317f8-948e-4835-b53a-e398d70b5773.jpg',
+            id: 12,
+            rate: 5
         }
     ]
 }
