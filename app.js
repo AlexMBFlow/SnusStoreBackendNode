@@ -1,13 +1,16 @@
 import express from "express";
-import routers from "./routes/index.js";
 import mongoose from "mongoose";
 import cors from "cors";
+import routers from "./routes/index.js";
 import Order from "./models/userModel.js";
 
-const PORT = 5000;
+const PORT = 5000
 const app = express()
 
+//app use
 app.use(cors())
+app.use(express.urlencoded({ extended: true }))
+app.use(express.json())
 app.use('/api', routers)
 
 
@@ -27,10 +30,10 @@ const start = async () => {
                     id: 9,
                     rate: 5
                 })
-                userOrder.save(err => {
+                /* userOrder.save(err => {
                     if (err) throw err
                     console.log("Order ADD!!")
-                })
+                }) */
             },
             err => {
                 console.log(err)
