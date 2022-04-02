@@ -1,4 +1,5 @@
-import { snusStore } from "../json.js"
+import { snusStore } from "../json.js";
+
 class SnusController {
     getSnus(req, res, next) {
         const json = JSON.stringify(snusStore)
