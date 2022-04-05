@@ -19,7 +19,8 @@ const snusStoreModel = new mongoose.Schema({
     saturation: String,
     price: Number,
     avatar: String,
-    rate: Number}]
+    rate: Number,
+}]
 })
 
 const snusStore = mongoose.model("snusstore", snusStoreModel)
