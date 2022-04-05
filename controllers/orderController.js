@@ -4,6 +4,7 @@ class OrderController {
     Order(req, res, next) {
         //console.log(req.body.data)
         const parce = JSON.parse(req.body.data)
+        console.log(parce.basket)
         //const parceInfo = JSON.parse(req.body.data.info)
         //console.log("requestQ", userOrder)
         new Order({

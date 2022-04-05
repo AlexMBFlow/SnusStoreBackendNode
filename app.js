@@ -22,8 +22,7 @@ app.use('/api', routers)
 const start = async () => {
     try {
         await mongoose.connect('mongodb://localhost/test')
-        const b = await snusStore.findById("624b3a9ee02eb0ef052f2ae1")
-        console.log("ПРЯМО ИЗ МОНГО!!!!!", b)
+        
         //!!const store = await snusStore.create(createSnusStore())
 /*         const a = new snusStoreController()
         a. */

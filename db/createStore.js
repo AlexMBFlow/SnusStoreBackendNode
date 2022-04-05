@@ -1,4 +1,4 @@
-const store = {
+/* const store = {
     snus: [
         {
           "name": "Nictech",
@@ -125,4 +125,4 @@ const store = {
 
 export const createSnusStore = () => {
     return store
-}
+} */
