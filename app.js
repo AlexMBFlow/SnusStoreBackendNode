@@ -3,10 +3,10 @@ import mongoose from "mongoose";
 import bodyParser from "body-parser";
 import cors from "cors";
 import routers from "./routes/index.js";
+import { Bot } from "./telegraf/index.js"
+import { PORT, TOKEN } from "./config.js";
 
-const PORT = 5000
 const app = express()
-
 
 //app use
 app.use(cors())
@@ -19,6 +19,7 @@ app.use('/api', routers)
 const start = async () => {
     try {
         await mongoose.connect('mongodb://localhost/test')
+        new Bot(TOKEN).init()
         app.listen(PORT, () => {
             console.log(`Server start on ${PORT} port`)
         })
