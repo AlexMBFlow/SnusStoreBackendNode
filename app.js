@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import bodyParser from "body-parser";
 import cors from "cors";
 import routers from "./routes/index.js";
-import { Bot } from "./telegraf/index.js"
+import { Bot } from "./telegraf/index.js";
 import { PORT, TOKEN } from "./config.js";
 
 const app = express()
