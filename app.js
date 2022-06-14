@@ -22,7 +22,7 @@ const start = async () => {
         await mongoose.connect('mongodb://localhost/test')
         //Включаем бота
         Bot.init()
-        //Слушаем команду /start в чате с ботом
+        //Слушаем команду /start в чате с ботом, чтобы обновить chatID
         Bot.startCmd()
         //Запускаем express
         app.listen(PORT, () => {
