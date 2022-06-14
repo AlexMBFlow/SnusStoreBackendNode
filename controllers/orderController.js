@@ -1,7 +1,9 @@
 import Order from "../models/orderModel.js";
+import Bot from "../telegraf/index.js";
+
 
 class OrderController {
-    Order(req, res, next) {
+    SaveOrder(req, res, next) {
         const parce = JSON.parse(req.body.data)
         parce.basket.forEach(el => {
             delete el._id
@@ -14,6 +16,7 @@ class OrderController {
         }).save(err => {
             if (err) throw err
         })
+        Bot.sendMsg(req.body.data)
         res.status(200).send("OK")
     }
 }

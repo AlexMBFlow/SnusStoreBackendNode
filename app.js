@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import bodyParser from "body-parser";
 import cors from "cors";
 import routers from "./routes/index.js";
-import { Bot } from "./telegraf/index.js";
+import Bot from "./telegraf/index.js";
 import { PORT, TOKEN } from "./config.js";
 
 const app = express()
@@ -18,8 +18,13 @@ app.use('/api', routers)
 
 const start = async () => {
     try {
+        //Подключаемся к бд
         await mongoose.connect('mongodb://localhost/test')
-        new Bot(TOKEN).init()
+        //Включаем бота
+        Bot.init()
+        //Слушаем команду /start в чате с ботом
+        Bot.startCmd()
+        //Запускаем express
         app.listen(PORT, () => {
             console.log(`Server start on ${PORT} port`)
         })
