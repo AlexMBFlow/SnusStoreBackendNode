@@ -4,6 +4,7 @@ import { TOKEN } from "../config.js";
 import 'moment/locale/ru.js';
 
 
+
 class Bot extends Telegraf {
     constructor(token) {
         super(token)
