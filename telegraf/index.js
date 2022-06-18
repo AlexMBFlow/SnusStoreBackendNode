@@ -28,7 +28,6 @@ class Bot extends Telegraf {
     sendMsg = (json) => {
         if (!this.chatID) this.chatID = 1116220140
         let resultString = `
-        **************************************************\n
         Новый заказ!:\n
         Дата заказа: ${moment().locale('ru').format('LLL')}
         `;
@@ -42,13 +41,12 @@ class Bot extends Telegraf {
             Кол-во никотина: ${nicotine}мг\n
             Вкус: ${saturation}\n
             Цена: ${price}₽\n
-            Фото:\n${avatar}\n
-            Рейтинг: ${rate}\n
+            Фото: ${avatar}\n
+            Рейтинг: ${rate}
             -------------------------------------------------
             `
         })
         resultString += `
-        \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ \n
         Информация о клиенте:\n
         Имя: ${parce.info?.firstName}\n
         Фамилия: ${parce.info?.secondName}\n
@@ -57,9 +55,7 @@ class Bot extends Telegraf {
         Город / Область: ${parce.info?.city}\n
         Район: ${parce.info?.area}\n
         E-mail: ${parce.info?.email}\n
-        Примечания: ${parce.info?.someInfo}\n
-        **************************************************
-        `
+        Примечания: ${parce.info?.someInfo}\n`
         //Отправляем сообщение в чат телеги от имени бота
         this.myBot.telegram.sendMessage(this.chatID, resultString)
     }
