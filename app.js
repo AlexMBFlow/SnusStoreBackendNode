@@ -4,7 +4,8 @@ import bodyParser from "body-parser";
 import cors from "cors";
 import routers from "./routes/index.js";
 import Bot from "./telegraf/index.js";
-import { PORT, TOKEN } from "./config.js";
+import path from "path";
+import { PORT } from "./config.js";
 
 const app = express()
 
@@ -14,6 +15,7 @@ app.use(bodyParser.json())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use('/api', routers)
+app.use('/public', express.static(path.resolve() + '/public'));
 
 
 const start = async () => {
