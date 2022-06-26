@@ -1,21 +1,35 @@
 import express from "express";
 import mongoose from "mongoose";
-import bodyParser from "body-parser";
+//import bodyParser from "body-parser";
 import cors from "cors";
+import path from "path";
+import http from "http";
 import routers from "./routes/index.js";
 import Bot from "./telegraf/index.js";
-import path from "path";
-import { PORT } from "./config.js";
+import { PORT, SOCKET_PORT } from "./config.js";
+import { WebSocketServer } from "ws";
+
+const wss = new WebSocketServer({ port: SOCKET_PORT });
+
+wss.on('connection', function connection(ws) {
+    console.log("USER CONNECTED!!!")
+    ws.on('message', function message(data) {
+        console.log('received: %s', data);
+    });
+
+    ws.send('something');
+})
 
 const app = express()
 
 //app use
 app.use(cors())
-app.use(bodyParser.json())
+//app.use(bodyParser.json())
 app.use(express.json())
-app.use(express.urlencoded({ extended: true }))
+//app.use(express.urlencoded({ extended: true }))
 app.use('/api', routers)
 app.use('/public', express.static(path.resolve() + '/public'));
+
 
 
 const start = async () => {

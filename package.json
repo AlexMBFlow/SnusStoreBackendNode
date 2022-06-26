@@ -4,9 +4,9 @@
     "cors": "^2.8.5",
     "express": "^4.17.3",
     "moment": "^2.29.3",
-    "mongodb": "^4.4.1",
     "mongoose": "^6.2.9",
-    "telegraf": "^4.8.5"
+    "telegraf": "^4.8.5",
+    "ws": "^8.8.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
