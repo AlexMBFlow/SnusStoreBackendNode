@@ -3,21 +3,19 @@ import mongoose from "mongoose";
 //import bodyParser from "body-parser";
 import cors from "cors";
 import path from "path";
-import http from "http";
+import { WebSocketServer } from "ws";
 import routers from "./routes/index.js";
 import Bot from "./telegraf/index.js";
 import { PORT, SOCKET_PORT } from "./config.js";
-import { WebSocketServer } from "ws";
 
 const wss = new WebSocketServer({ port: SOCKET_PORT });
 
-wss.on('connection', function connection(ws) {
+wss.on('connection', ws => {
     console.log("USER CONNECTED!!!")
-    ws.on('message', function message(data) {
-        console.log('received: %s', data);
+    ws.on('message', data => {
+        console.log('data', data);
     });
-
-    ws.send('something');
+    ws.send('send!');
 })
 
 const app = express()
