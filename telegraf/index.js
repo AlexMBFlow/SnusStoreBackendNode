@@ -39,7 +39,7 @@ class Bot extends Telegraf {
             Вкус: ${taste}\n
             Кол-во паков: ${packs}шт\n
             Кол-во никотина: ${nicotine}мг\n
-            Вкус: ${saturation}\n
+            Крепость: ${saturation}\n
             Цена: ${price}₽\n
             Фото: ${avatar}\n
             Рейтинг: ${rate}
