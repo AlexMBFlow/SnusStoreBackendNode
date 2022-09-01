@@ -1,4 +1,4 @@
-import snusStoreController from "../controllers/snusStoreController.js";
+import snusStoreController from "./snusStoreController.js";
 
 class SnusController {
     async getSnus(req, res, next) {

@@ -1,5 +1,5 @@
 import Router from "express";
-import SnusController from "../controllers/index.js";
+import SnusController from "../controllers/getSnus.js";
 
 const router = new Router()
 
