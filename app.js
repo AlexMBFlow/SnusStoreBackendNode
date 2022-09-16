@@ -3,23 +3,16 @@ import mongoose from "mongoose";
 //import bodyParser from "body-parser";
 import cors from "cors";
 import path from "path";
-import { WebSocketServer } from "ws";
 import routers from "./routes/index.js";
 import Bot from "./telegraf/index.js";
 import { PORT, SOCKET_PORT } from "./config.js";
+import { initSocket } from "./services/socket/index.js";
 
-const wss = new WebSocketServer({ port: SOCKET_PORT });
-
-wss.on('connection', ws => {
-    console.log("USER CONNECTED!!!")
-    ws.on('message', data => {
-        console.log('data', data);
-    });
-    ws.send('send!');
-})
 
 const app = express()
 
+
+initSocket(SOCKET_PORT)
 //app use
 app.use(cors())
 //app.use(bodyParser.json())
