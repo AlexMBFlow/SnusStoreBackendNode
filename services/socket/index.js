@@ -1,15 +1,23 @@
-import { WebSocketServer } from "ws";
+import WebSocket, { WebSocketServer } from "ws";
 import { Buffer } from "buffer";
 
 
 export const initSocket = (SOCKET_PORT) => {
     const wss = new WebSocketServer({ port: SOCKET_PORT });
-    wss.on('connection', ws => {
-        console.log("USER CONNECTED!!!")
-        ws.on('message', data => {
-            console.log("data", Buffer.from(data).toString())
+    console.log(`WebSocketServer start on ${SOCKET_PORT} port`)
+
+    wss.on('connection', client => {
+        client.on('message', data => {
+            const clientPayload = Buffer.from(data).toString()
+            console.log("data", )
+            wss.clients.forEach(client => {
+                if (client.readyState === WebSocket.OPEN) {
+                    //client.send(data, { binary: isBinary })
+                    client.send(clientPayload);
+                    console.log(clientPayload)
+                }
+            })
         });
-        ws.send('send!');
     })
 
     return wss
