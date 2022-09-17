@@ -7,12 +7,11 @@ export const initSocket = (SOCKET_PORT) => {
     console.log(`WebSocketServer start on ${SOCKET_PORT} port`)
 
     wss.on('connection', client => {
+        console.log("User connected")
         client.on('message', data => {
             const clientPayload = Buffer.from(data).toString()
-            console.log("data", )
             wss.clients.forEach(client => {
                 if (client.readyState === WebSocket.OPEN) {
-                    //client.send(data, { binary: isBinary })
                     client.send(clientPayload);
                     console.log(clientPayload)
                 }
