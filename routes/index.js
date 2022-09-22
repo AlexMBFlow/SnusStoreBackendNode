@@ -1,10 +1,10 @@
 import Router from "express";
-import snus from "./snus.js";
+import Snus from "./snus.js";
 import Order from "./order.js";
 
-const router = new Router();
+const routerShop = new Router();
 
-router.use("/", snus)
-router.use("/", Order)
+routerShop.use("/", Snus);
+routerShop.use("/", Order);
 
-export default router
+export default routerShop

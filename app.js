@@ -1,27 +1,23 @@
 import express from "express";
 import mongoose from "mongoose";
-//import bodyParser from "body-parser";
 import cors from "cors";
 import path from "path";
-import routers from "./routes/index.js";
+import routerShop from "./routes/index.js";
+import routerAdmin from "./routes/admin/index.js";
 import Bot from "./telegraf/index.js";
 import { PORT, SOCKET_PORT } from "./config.js";
 import { initSocket } from "./services/socket/index.js";
 
-
 const app = express()
 
-
 initSocket(SOCKET_PORT)
+
 //app use
-app.use(cors())
-//app.use(bodyParser.json())
-app.use(express.json())
-//app.use(express.urlencoded({ extended: true }))
-app.use('/api', routers)
-app.use('/public', express.static(path.resolve() + '/public'));
-
-
+app.use(cors()) // Корс
+app.use(express.json()) // Обработка json'ов
+app.use('/api', routerShop) // Shop
+app.use('/admin', routerAdmin) // Admin Panel
+app.use('/public', express.static(path.resolve() + '/public')); // Картинки
 
 const start = async () => {
     try {
