@@ -1,7 +1,7 @@
 import { getSnusStoreFromDB } from "../db/getSnusStoreFromDB.js";
 
 class snusStoreController {
-    async getSnusFromMongo() {
+    async getSnusFromStore() {
         try {
             const store =  await getSnusStoreFromDB("624b3a9ee02eb0ef052f2ae1")
             const json = JSON.stringify(store.snus)
